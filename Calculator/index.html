@@ -7,35 +7,66 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="calculator">
-      <div class="display" id="display" aria-live="polite">0</div>
+    <main class="calculator-page">
+      <section class="calculator" aria-label="Basic calculator">
+        <h1>Calculator</h1>
+        <div class="display" id="display" aria-live="polite">0</div>
 
-      <div class="buttons">
-        <button class="btn btn-operator" data-action="clear">C</button>
-        <button class="btn btn-operator" data-action="delete">DEL</button>
-        <button class="btn btn-operator" data-action="percent">%</button>
-        <button class="btn btn-operator" data-action="operator" data-value="/">÷</button>
+        <div class="buttons">
+          <button class="btn btn-operator" data-action="clear">C</button>
+          <button class="btn btn-operator" data-action="delete">DEL</button>
+          <button class="btn btn-operator" data-action="percent">%</button>
+          <button class="btn btn-operator" data-action="operator" data-value="/">÷</button>
 
-        <button class="btn" data-action="number" data-value="7">7</button>
-        <button class="btn" data-action="number" data-value="8">8</button>
-        <button class="btn" data-action="number" data-value="9">9</button>
-        <button class="btn btn-operator" data-action="operator" data-value="*">×</button>
+          <button class="btn" data-action="number" data-value="7">7</button>
+          <button class="btn" data-action="number" data-value="8">8</button>
+          <button class="btn" data-action="number" data-value="9">9</button>
+          <button class="btn btn-operator" data-action="operator" data-value="*">×</button>
 
-        <button class="btn" data-action="number" data-value="4">4</button>
-        <button class="btn" data-action="number" data-value="5">5</button>
-        <button class="btn" data-action="number" data-value="6">6</button>
-        <button class="btn btn-operator" data-action="operator" data-value="-">−</button>
+          <button class="btn" data-action="number" data-value="4">4</button>
+          <button class="btn" data-action="number" data-value="5">5</button>
+          <button class="btn" data-action="number" data-value="6">6</button>
+          <button class="btn btn-operator" data-action="operator" data-value="-">−</button>
 
-        <button class="btn" data-action="number" data-value="1">1</button>
-        <button class="btn" data-action="number" data-value="2">2</button>
-        <button class="btn" data-action="number" data-value="3">3</button>
-        <button class="btn btn-operator" data-action="operator" data-value="+">+</button>
+          <button class="btn" data-action="number" data-value="1">1</button>
+          <button class="btn" data-action="number" data-value="2">2</button>
+          <button class="btn" data-action="number" data-value="3">3</button>
+          <button class="btn btn-operator" data-action="operator" data-value="+">+</button>
 
-        <button class="btn btn-zero" data-action="number" data-value="0">0</button>
-        <button class="btn" data-action="decimal">.</button>
-        <button class="btn btn-equals" data-action="equals">=</button>
-      </div>
-    </div>
+          <button class="btn btn-zero" data-action="number" data-value="0">0</button>
+          <button class="btn" data-action="decimal">.</button>
+          <button class="btn btn-equals" data-action="equals">=</button>
+        </div>
+      </section>
+
+      <section class="calculus" aria-label="Calculus calculator">
+        <h2>Numerical calculus</h2>
+        <label for="function-input">Function f(x)</label>
+        <input id="function-input" type="text" placeholder="e.g. sin(x) + x^2" autocomplete="off" />
+
+        <div class="calculus-grid">
+          <div>
+            <label for="lower-bound">Integral from a</label>
+            <input id="lower-bound" type="number" step="any" placeholder="0" />
+          </div>
+          <div>
+            <label for="upper-bound">to b</label>
+            <input id="upper-bound" type="number" step="any" placeholder="1" />
+          </div>
+          <div>
+            <label for="derivative-point">Derivative at x</label>
+            <input id="derivative-point" type="number" step="any" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="calculus-actions">
+          <button class="calculus-button" id="integral-button" type="button">Calculate integral</button>
+          <button class="calculus-button" id="derivative-button" type="button">Calculate derivative</button>
+        </div>
+        <p class="calculus-result" id="calculus-result" aria-live="polite">Enter a function to begin.</p>
+        <p class="calculus-error" id="calculus-error" role="alert" aria-live="assertive"></p>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
