@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Memory Game</h1>
+    <p>Открий всички двойки еднакви карти.</p>
+    <div class="controls">
+      <label for="level">Ниво</label>
+      <select id="level">
+        <option value="easy">Лесно — 6 двойки</option>
+        <option value="hard">Трудно — 12 двойки</option>
+      </select>
+      <button id="restart" type="button">Нова игра</button>
+    </div>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div id="board" class="board" aria-label="Карти"></div>
+  </main>
+</body>
+</html>
